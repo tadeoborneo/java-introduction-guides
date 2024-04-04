@@ -1,5 +1,6 @@
 package Guia2;
 
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class ItemSell {
@@ -7,6 +8,7 @@ public class ItemSell {
     private String name;
     private String description;
     private Double unitPrice;
+
 
     public ItemSell(UUID id, String name, String description, Double unitPrice) {
         this.id = id;

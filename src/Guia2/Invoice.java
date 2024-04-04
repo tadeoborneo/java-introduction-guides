@@ -2,6 +2,7 @@ package Guia2;
 
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.UUID;
 
 public class Invoice {
@@ -9,12 +10,14 @@ public class Invoice {
     private Double totalAmount;
     private LocalDateTime date;
     private Client client;
+    private ArrayList<ItemSell> items;
 
-    public Invoice(UUID id, Double totalMount, LocalDateTime date, Client client) {
+    public Invoice(UUID id, LocalDateTime date, Client client, ArrayList<ItemSell> items) {
         this.id = id;
-        this.totalAmount = totalMount;
         this.date = date;
         this.client = client;
+        this.items = items;
+        this.totalAmount = calculateTotalAmount();
     }
 
 
@@ -63,5 +66,13 @@ public class Invoice {
                 ", discountedAmount="+this.getDiscountedAmount()+
                 ", client=" + client +
                 '}';
+    }
+
+    public Double calculateTotalAmount(){
+        Double Amount = 0.0;
+        for(ItemSell item : this.items){
+            Amount += item.getUnitPrice();
+        }
+        return Amount;
     }
 }
