@@ -2,6 +2,7 @@ package guia2Ej3;
 
 public class mainEJ3 {
     public static void main(String[] args) {
+        /*
         Client clientOne = new Client("Tadeo", 'M');
         System.out.println(clientOne);
         Account accountOne = new Account(10000d, clientOne);
@@ -17,5 +18,7 @@ public class mainEJ3 {
             System.out.println(i);
         for (String i : accountOne.getExtractionsInfo())
             System.out.println(i);
+         */
+
     }
 }
