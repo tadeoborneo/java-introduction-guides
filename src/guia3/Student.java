@@ -1,6 +1,8 @@
-package guia2Ej3;
+package guia3;
 
-public class Student extends Person{
+import guia3.Person;
+
+public class Student extends Person {
     private Integer enrollmentYear;
     private Double monthlyQuote;
     private String career;

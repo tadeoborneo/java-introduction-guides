@@ -1,4 +1,4 @@
-package guia2Ej3;
+package guia3;
 
 public class Person {
     private String dni;

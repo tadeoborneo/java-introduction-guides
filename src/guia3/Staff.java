@@ -1,6 +1,6 @@
-package guia2Ej3;
+package guia3;
 
-public class Staff extends Person{
+public class Staff extends Person {
     private Double salary;
     private String shift;
 
